@@ -1,0 +1,17 @@
+---
+
+## LXC configuration
+- name: Create LXC containers & start them
+  lxc_container:
+    name: "{{ item }}"
+    state: restarted
+    template: ubuntu
+    with_items: "{{ groups['dev'] }}"
+    register: containers_info
+
+- name: Update APT for each containers
+  lxc_container:
+    name: "{{ item.lxc_container.name }}"
+    container_command: apt-get update -y
+  with_items: "{{ containers_info.results }}"
+  when: containers_info|changed

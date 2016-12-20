@@ -1,0 +1,13 @@
+[core]
+10.0.3.10 ansible_user=root
+
+[mysql]
+10.0.3.11 ansible_user=root
+
+[rabbitmq]
+10.0.3.20 ansible_user=root
+
+[dev:children]
+core
+rabbitmq
+mysql

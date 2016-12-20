@@ -1,0 +1,7 @@
+---
+
+- hosts: dev
+  become: yes
+  roles:
+    - infra.lxc
+    - archi.common
