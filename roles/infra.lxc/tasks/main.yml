@@ -1,13 +1,15 @@
 ---
 
-## LXC configuration
+# LXC configuration
 - name: Create LXC containers & start them
   lxc_container:
     name: "{{ item }}"
-    state: restarted
+    container_log: true
+    state: started
     template: ubuntu
-    with_items: "{{ groups['dev'] }}"
-    register: containers_info
+    template_options: --release trusty
+  with_items: "{{ groups['dev'] }}"
+  register: containers_info
 
 - name: Update APT for each containers
   lxc_container:

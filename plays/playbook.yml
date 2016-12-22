@@ -1,0 +1,5 @@
+---
+# Order as wishes, what my playbook will play
+
+- include: lxc.yml
+# - include: galaxy.yml

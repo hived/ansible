@@ -1,0 +1,9 @@
+---
+
+- name: lxc.yml | All roles
+  hosts: dev # Single host or group of hosts
+  become: no # yes/no
+  #sudo: True/False
+  roles:
+    - { role: infra.lxc,    tags: ["lxc"] }
+    - { role: archi.common, tags: ["common"] }
