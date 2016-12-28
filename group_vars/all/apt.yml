@@ -1,0 +1,7 @@
+---
+
+apt_default_packages:
+                      - python-apt
+                      - unattended-upgrades
+                      - language-pack-en-base
+                      - unzip

@@ -1,0 +1,6 @@
+- src: git+https://github.com/ANXS/apt.git
+  version: "v1.0.2"
+  name: ANXS.apt
+- src: git+https://github.com/Stouts/Stouts.sudo.git
+  version: "2.1.0"
+  name: Stouts.sudo

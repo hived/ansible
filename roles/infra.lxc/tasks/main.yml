@@ -7,7 +7,6 @@
     container_log: true
     state: started
     template: ubuntu
-    template_options: --release trusty
   with_items: "{{ groups['dev'] }}"
   register: containers_info
 

@@ -1,4 +1,11 @@
 ---
+# Install (Bottle) python package.
+- name: Intall PIP librairies
+  pip: name={{ item }}
+  with_items:
+    - passlib
+    - ansible
+    - lxc-python2
 
 - name: lxc.yml | All roles
   hosts: dev # Single host or group of hosts
